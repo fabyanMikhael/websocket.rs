@@ -61,7 +61,7 @@ where
                 }
                 frame.encode_without_mask()
             }
-            Role::Client => frame.encode_with(rand::random::<u32>().to_ne_bytes()),
+            Role::Client => frame.encode_with(fastrand::u32(..).to_ne_bytes()),
         };
         self.stream.write_all(&buf).await
     }
