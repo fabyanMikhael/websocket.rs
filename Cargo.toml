@@ -13,7 +13,7 @@ exclude = ["/examples", "/autobahn", "/tests",  ".*"]
 
 [dependencies]
 fastrand = "2.0.1"
-tokio = { version = "1", default-features = false, features = ["rt", "io-util"] }
+tokio = { version = "*", default-features = false, features = ["rt", "io-util", "time"] }
 
 [dev-dependencies]
 tokio = { version = "1", default-features = false, features = ["macros", "rt-multi-thread", "net"] }
